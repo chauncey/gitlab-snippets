@@ -40,9 +40,5 @@ class Snippet(object):
         data.update({'content': content})
         headers = {'PRIVATE-TOKEN': config.SNIPPETS_TOKEN}
         update_url = '{}/{}'.format(config.GITLAB_URL, snippet_id)
-        r = requests.put(
-            update_url,
-            headers=headers,
-            data=data
-        )
+        r = requests.put(update_url, headers=headers, data=data)
         return r.text
