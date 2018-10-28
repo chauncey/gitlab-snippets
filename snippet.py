@@ -8,7 +8,7 @@ class Snippet(object):
     """Snippets for GitLab"""
 
     @staticmethod
-    def update_snippet(content):
+    def update_policies_snippet(content):
         """Update the nightly testing policies
 
         Args:
@@ -17,7 +17,7 @@ class Snippet(object):
         Returns:
             Response from GitLab API
         """
-        return Snippet.update_snippet(config.SNIPPET_ID, content)
+        return Snippet.update_snippet(config.POLICIES_ID, content)
 
     @staticmethod
     def update_snippet(snippet_id, content, **kwargs):
